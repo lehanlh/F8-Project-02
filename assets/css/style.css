@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 50000px;
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ======== Common ======== */
+.content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    padding: 17px 18px;
+    text-align: center;
+    background: #ffb900;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ======== Header ======== */
+.header {
+    position: sticky;
+    top: -24px;
+    padding-top: 24px;
+    background: #fffcf4;
+}
+
+.header .nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.header .navigation {
+    margin-left: 491px;
+    display: flex;
+    align-items: center;
+}
+
+.header li {
+    padding: 0 21px;
+}
+
+.header li a {
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #5f5b53;
+}
+
+.header li:first-child a {
+    position: relative;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #171100;
+}
+
+.header li:first-child a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background: #171100;
+    border-radius: 1px;
+}
+
+.header-cta {
+    margin-left: 49px;
+    min-width: 144px;
+    background: #171100;
+    border-radius: 24.5px;
+    font-size: 1.6rem;
+}
+
+/* ======== Hero ======== */
+.hero {
+    padding-top: 52px;
+    background: #fffcf4;
+}
