@@ -9,6 +9,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -45,11 +46,11 @@ a {
 
 .btn:hover {
     opacity: 0.8;
+    cursor: pointer;
 }
 
 .heading {
     font-family: var(--font-heading);
-    width: 470px;
     font-weight: 700;
     letter-spacing: -0.02em;
     color: #171100;
@@ -149,7 +150,7 @@ a {
 
 /* ======== Hero ======== */
 .hero {
-    padding: 54px 0 64px;
+    padding: 54px 0 65px;
     background: #fffcf4;
 }
 
@@ -294,7 +295,8 @@ a {
 
 /* ======== Popular ======== */
 .popular {
-    margin: 200px 0 200px;
+    margin-top: 135px;
+    padding: 65px 0;
 }
 
 /* popular-top */
@@ -422,6 +424,7 @@ a {
 
 /* ======== Feedback ======== */
 .feedback {
+    margin-top: 135px;
     padding: 96px 0 96px;
     background: #2e2100;
 }
@@ -492,4 +495,67 @@ a {
     font-size: 2.6rem;
     line-height: 1.54;
     color: #ffffff;
+}
+
+/* ======== Features ======== */
+/* Features */
+.features {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+
+.features .body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features .images {
+    display: flex;
+    gap: 0 30px;
+}
+
+.features .images img {
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.features .images img:first-child {
+    margin-top: 34px;
+}
+
+.features .sub-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 41%;
+}
+
+.features .desc {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.features-cta {
+    margin-top: 32px;
+    min-width: 137px;
+    font-size: 1.6rem;
+    background: var(--primary-color);
+}
+
+/* Features-2nd */
+.features-2nd {
+    margin-top: 70px;
+}
+
+.features-2nd .sub-content {
+    width: 49%;
+}
+
+.features-2nd .images img {
+    width: 470px;
+    height: 440px;
 }
