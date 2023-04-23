@@ -347,7 +347,10 @@ a {
 .popular-bottom .item {
     border: 1px solid #e2dfda;
     border-radius: 12px;
-    flex: 1;
+    width: 33.33%;
+}
+
+.popular-bottom .item:hover {
     box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
 }
 
@@ -558,4 +561,124 @@ a {
 .features-2nd .images img {
     width: 470px;
     height: 440px;
+}
+
+/* ======== Blog ======== */
+.blog {
+    margin-top: 135px;
+    padding: 96px 0;
+}
+
+.blog-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.blog-top .desc {
+    margin-top: 16px;
+    width: 448px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.blog-list {
+    display: flex;
+    margin-top: 55px;
+    gap: 0 30px;
+    overflow: hidden;
+}
+
+.blog-list .item {
+    flex-shrink: 0;
+    width: calc(33.33% - 20px);
+    border-radius: 16px;
+}
+
+.blog-list .item:hover {
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+}
+
+.blog-list .thumbnail {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.blog-list .body {
+    padding: 20px 20px 28px;
+}
+
+.blog-list .date {
+    position: relative;
+    display: inline-flex;
+    padding-bottom: 12px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
+.blog-list .date::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.blog-list .date::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: -27px;
+    content: "";
+    display: block;
+    height: 1px;
+    background: #e2dfda;
+    border-radius: 0.5px;
+}
+
+.blog-list .title a {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #171100;
+}
+
+.blog-list-cta {
+    margin-top: 12px;
+    font-size: 1.4rem;
+}
+
+.blog-list-cta:hover {
+    opacity: 1;
+    background: var(--primary-color);
+}
+
+.blog .dots {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+    gap: 0 6px;
+}
+
+.blog .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5f5b53;
+    cursor: pointer;
+}
+
+.blog .dot.active {
+    background: var(--primary-color);
+    cursor: default;
 }
