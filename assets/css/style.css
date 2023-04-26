@@ -41,10 +41,11 @@ a {
     font-size: 1.8rem;
     text-align: center;
     color: #ffffff;
+    transition: all 0.4s ease-in-out;
 }
 
 .btn:hover {
-    opacity: 0.8;
+    transform: scale(1.1, 1.1);
     cursor: pointer;
 }
 
@@ -87,6 +88,11 @@ a {
     word-break: break-all;
 }
 
+.thumb-block {
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    overflow: hidden;
+}
 /* ======== Header ======== */
 .header {
     position: sticky;
@@ -110,21 +116,25 @@ a {
 
 .header li {
     padding: 0 21px;
+    text-align: center;
 }
 
-.header li a {
+.header .nav-active .nav-link:hover,
+.nav-link:hover {
+    text-shadow: 1px 0 0 currentColor;
+    transition-duration: 0.4s;
+}
+
+.header li .nav-link {
     font-weight: 400;
     font-size: 1.6rem;
-    text-align: center;
+    line-height: 1.75;
     color: #5f5b53;
 }
 
-.header li:first-child a {
+.header .nav-active .nav-link {
     position: relative;
     font-weight: 600;
-    font-size: 1.6rem;
-    line-height: 1.75;
-    color: #171100;
 }
 
 .header li:first-child a::after {
@@ -168,6 +178,11 @@ a {
     height: 685px;
     object-fit: cover;
     border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+.hero .image:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .hero-summary {
@@ -254,6 +269,7 @@ a {
     border: none;
     background: transparent;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
 }
 
 .watch-video .icon {
@@ -273,6 +289,10 @@ a {
     font-size: 1.8rem;
     line-height: 1.67;
     color: #171100;
+}
+
+.watch-video:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .hero .stats {
@@ -353,11 +373,19 @@ a {
     box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
 }
 
+.popular-bottom .thumb-block {
+    height: 278px;
+}
+
 .popular-bottom .thumbnail {
     width: 100%;
-    height: 278px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 12px 12px 0px 0px;
+    transition: all 0.4s ease-in-out;
+}
+
+.popular-bottom .thumbnail:hover {
+    transform: scale(1.2, 1.2);
 }
 
 .popular-bottom .body {
@@ -521,6 +549,11 @@ a {
     height: 404px;
     object-fit: cover;
     border-radius: 16px;
+    transition: all 0.4s ease-in-out;
+}
+
+.features .images img:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .features .images img:first-child {
@@ -599,11 +632,19 @@ a {
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
 }
 
+.blog-list .thumb-block {
+    height: 250px;
+}
+
 .blog-list .thumbnail {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 16px 16px 0px 0px;
+    transition: all 0.4s ease-in-out;
+}
+
+.blog-list .thumbnail:hover {
+    transform: scale(1.2, 1.2);
 }
 
 .blog-list .body {
@@ -716,6 +757,14 @@ a {
     gap: 18px;
 }
 
+.footer .social .icon {
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .social .icon:hover {
+    transform: scale(1.2, 1.2);
+}
+
 .footer .title {
     display: inline-block;
     padding: 0 48px 14px 0;
@@ -757,4 +806,12 @@ a {
     line-height: 1.86;
     text-align: center;
     color: #807d74;
+}
+
+.footer .col:not(:last-child) .list a {
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .col:not(:last-child) .list a:hover {
+    transform: scale(1.1, 1.1);
 }
