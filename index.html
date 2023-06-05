@@ -18,36 +18,107 @@
 
         <!-- Style css -->
         <link rel="stylesheet" href="./assets/css/style.css" />
+
+        <!-- Responsive css -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- ======== Header ======== -->
+        <!-- ======== PC Header ======== -->
         <header class="header">
             <div class="content">
-                <div class="nav-bar">
-                    <a href="/">
+                <nav class="nav-bar">
+                    <label
+                        class="tablet-mobile-menu show-on-tm"
+                        for="menu-checkbox"
+                    >
+                        <svg
+                            class="toggle-menu"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="CurrentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
+                    <!-- Logo -->
+                    <a href="">
                         <img
                             src="./assets/img/Lesson..svg"
                             alt="Lesson."
                             class="logo"
                         />
                     </a>
-                    <ul class="navigation">
+
+                    <!-- Navigation -->
+                    <ul id="pc-nav" class="navigation hide-on-tablet-mobile">
                         <li class="nav-active">
                             <a class="nav-link" href="#">Home</a>
                         </li>
+
                         <li>
                             <a class="nav-link" href="#courses">Courses</a>
                         </li>
+
                         <li>
                             <a class="nav-link" href="#pricing">Pricing</a>
                         </li>
+
                         <li>
                             <a class="nav-link" href="#reviews">Reviews</a>
                         </li>
+
+                        <li>
+                            <a
+                                href="#!"
+                                class="nav-link show-on-mobile separate"
+                            >
+                                Sign Up
+                            </a>
+                        </li>
                     </ul>
+
                     <!-- Call to actions -->
                     <a href="#!" class="btn header-cta">Sign Up</a>
-                </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ======== Tablet & Mobile Header ======== -->
+        <header class="tm-header show-on-tm">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+
+            <label for="menu-checkbox" class="overlay-menu"></label>
+
+            <!-- Tablet & Mobile menu -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="">
+                    <img
+                        src="./assets/img/Lesson..svg"
+                        alt="Lesson."
+                        class="logo"
+                    />
+                </a>
+
+                <!-- Naigation -->
+                <ul id="tm-nav" class="tm-nav"></ul>
+                <script>
+                    const pcNav = document.querySelector("#pc-nav");
+                    const mobileNav = document.querySelector("#tm-nav");
+
+                    // Copy from pc-nav to tm-nav
+                    mobileNav.innerHTML = pcNav.innerHTML;
+                </script>
             </div>
         </header>
 
@@ -57,7 +128,7 @@
                 <div class="content">
                     <div class="body">
                         <!-- hero-left -->
-                        <div class="media-block">
+                        <div class="media-block hide-on-tablet-mobile">
                             <img
                                 class="image"
                                 src="./assets/img/hero-img.jpg"
@@ -121,9 +192,9 @@
                                 from world-class universities and companies.
                             </p>
                             <div class="cta-group">
-                                <a href="#!" class="btn hero-cta"
-                                    >See Courses</a
-                                >
+                                <a href="#!" class="btn hero-cta">
+                                    See Courses
+                                </a>
                                 <button class="watch-video">
                                     <div class="icon">
                                         <img
@@ -135,12 +206,20 @@
                                 </button>
                             </div>
 
-                            <div>
+                            <div class="hero-stats hide-on-tablet-mobile">
                                 <p class="desc">Recent engagement</p>
                                 <p class="desc stats">
                                     <strong>50K</strong> Students
                                     <strong>70+</strong> Courses
                                 </p>
+                            </div>
+
+                            <div class="hero-stats show-on-tm">
+                                <p class="desc">Recent engagement</p>
+                                <div class="desc stats">
+                                    <p><strong>50K</strong> Students</p>
+                                    <p><strong>70+</strong> Courses</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -158,7 +237,7 @@
                                 shine for the next future career.
                             </p>
                         </div>
-                        <div class="control">
+                        <div class="control hide-on-tablet-mobile">
                             <button class="control-btn">
                                 <svg
                                     width="8"
@@ -497,7 +576,7 @@
                             <p class="desc">
                                 Take the next step toward. Join now to receive
                                 personalized and more recommendations from the
-                                full Coursera catalog.
+                                full Courser catalog.
                             </p>
                             <a href="#!" class="btn features-cta">Join Now</a>
                         </div>
@@ -706,18 +785,19 @@
                                         class="thumbnail"
                                     />
                                 </a>
-                            </div class="thumb-block">
+                            </div>
+
                             <div class="body">
                                 <span class="date">21 November 2021</span>
                                 <h3 class="title">
-                                    <a href="#!"
-                                        >How to become a pro web designer in
-                                        2022 and get remote job?</a
-                                    >
+                                    <a href="#!">
+                                        How to become a pro web designer in 2022
+                                        and get remote job?
+                                    </a>
                                 </h3>
-                                <a href="#!" class="btn blog-list-cta"
-                                    >Read More</a
-                                >
+                                <a href="#!" class="btn blog-list-cta">
+                                    Read More
+                                </a>
                             </div>
                         </div>
 
@@ -747,7 +827,7 @@
                         </div>
                     </div>
 
-                    <div class="dots">
+                    <div class="dots hide-on-tablet-mobile">
                         <div class="dot"></div>
                         <div class="dot active"></div>
                         <div class="dot"></div>
@@ -860,8 +940,8 @@
                 </div>
 
                 <div class="copyright">
-                    <p>Copyright ©2022 webdesign.gdn All rights reserved</p>
-                </d>
+                    <p>Copyright ©2022 web design.gdn All rights reserved</p>
+                </div>
             </div>
         </footer>
     </body>

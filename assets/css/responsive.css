@@ -1,0 +1,236 @@
+/* PC Breakpoint */
+@media screen and (min-width: 992px) {
+    .show-on-mobile {
+        display: none;
+    }
+
+    .show-on-tm {
+        display: none;
+    }
+}
+
+/* Tablet & Mobile Breakpoint */
+@media screen and (max-width: 991px) {
+    .hide-on-tablet-mobile {
+        display: none !important;
+    }
+
+    .header .nav-bar {
+        position: relative;
+    }
+
+    .header .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .toggle-menu {
+        width: 24px;
+        height: auto;
+        color: #666;
+    }
+
+    .overlay-menu {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        background: #fff;
+        z-index: 2;
+        padding: 20px;
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+
+    .menu-checkbox:checked ~ .overlay-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+
+    .tm-nav {
+        margin-top: 20px;
+    }
+
+    .tm-nav .nav-link {
+        display: block;
+        padding: 10px 0;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.75;
+        color: #5f5b53;
+    }
+
+    .separate {
+        border-top: 1.5px solid #ebebeb;
+    }
+
+    .hero .body {
+        flex-direction: column;
+    }
+
+    .hero .media-block {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-summary {
+        width: 270px;
+        height: auto;
+    }
+
+    .hero .content-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 64px 0 0 0;
+    }
+
+    .hero .heading {
+        width: 86%;
+        text-align: center;
+    }
+
+    .hero .desc {
+        width: 83%;
+        text-align: center;
+    }
+
+    .hero .cta-group {
+        margin-bottom: 38px;
+    }
+
+    .hero-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hide-on-tablet-mobile {
+        display: none;
+    }
+
+    .hero-stats .desc {
+        width: 100%;
+    }
+
+    .hero-stats .stats {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-stats .stats p {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popular {
+        margin-top: 35px;
+    }
+
+    .popular-top {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .popular-top .desc {
+        width: 85%;
+        margin: 16px auto;
+    }
+
+    .popular-bottom .list {
+        overflow: auto;
+    }
+
+    .popular-bottom .item {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: auto;
+    }
+
+    .feedback-list {
+        overflow: auto;
+    }
+
+    .features {
+        margin-top: 35px;
+    }
+
+    .features .body {
+        flex-direction: column;
+    }
+
+    .features .sub-content {
+        margin-bottom: 80px;
+        order: 1;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features .heading {
+        width: 68%;
+    }
+
+    .features .desc {
+        width: 50%;
+    }
+
+    .features .images {
+        order: 2;
+        justify-content: center;
+    }
+
+    .features-2nd .heading {
+        width: 71%;
+    }
+
+    .features-2nd .desc {
+        width: 67%;
+    }
+
+    .blog {
+        margin-top: 35px;
+    }
+
+    .blog-list {
+        overflow: auto;
+    }
+
+    .footer .row {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        row-gap: 40px;
+    }
+
+    .footer .row .col {
+        width: 100% !important;
+    }
+}
+
+/* Tablet Breakpoint */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .show-on-mobile {
+        display: none !important;
+    }
+}
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 767px) {
+}

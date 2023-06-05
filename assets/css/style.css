@@ -150,7 +150,7 @@ a {
 }
 
 .header-cta {
-    margin-left: 49px;
+    margin-left: auto;
     min-width: 144px;
     background: #171100;
     border-radius: 24.5px;
