@@ -626,6 +626,7 @@ a {
     flex-shrink: 0;
     width: calc(33.33% - 20px);
     border-radius: 16px;
+    border: 1px solid #ccc;
 }
 
 .blog-list .item:hover {
@@ -786,9 +787,10 @@ a {
     font-size: 1.4rem;
     line-height: 1.86;
     color: #bfbcb2;
+    white-space: nowrap;
 }
 
-.footer .list:last-child a {
+.footer li:last-child a {
     margin-bottom: none;
 }
 
